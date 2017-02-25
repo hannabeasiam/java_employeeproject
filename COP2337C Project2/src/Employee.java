@@ -1,18 +1,18 @@
 
 import java.util.Random;
-import javax.swing.JOptionPane;
 
 public class Employee {
 	// Private variables
-	private String firstName, lastName, IDnumber, socialSecurityNumber, department;
+	private String firstName, lastName, idNumber, socialSecurityNumber, department;
 	private int startYear, departmentCode;
 	 
 	// Default constructor
 	public Employee(){
+		
 		firstName = "John";
 		lastName = "Doe";
 		startYear = 2017;
-		IDnumber = CreateIDNumber();
+		idNumber = createIDNumber();
 		socialSecurityNumber = "XXXXXXXXX";
 		setSocial(socialSecurityNumber);
 		department = "Java";
@@ -20,15 +20,15 @@ public class Employee {
 	}
 	 	 
 	// Parameter constructor
-	public Employee(String fN, String lN, String SSN, int sY, String dep, int depCode){
+	public Employee(String fN, String lN, String ssn, int sY, String dep, int depCode){
 		firstName = fN;
 		lastName = lN;
-		socialSecurityNumber = SSN;
+		socialSecurityNumber = ssn;
 		setSocial(socialSecurityNumber);
 		startYear = sY;
 		department = dep;
 		departmentCode = depCode;
-		IDnumber = CreateIDNumber();	
+		idNumber = createIDNumber();	
 	}
 
 	// Mutators (Setters)
@@ -37,12 +37,11 @@ public class Employee {
 	}
 	public void setLastName(String lN){		 
 		lastName = lN;
-		IDnumber = CreateIDNumber();	
 	}	 
 	// Format: 3Num-2Num-4Num		 
-	public void setSocial(String SSN){
-		socialSecurityNumber = SSN.substring(0,3) + "-" 
-			+ SSN.substring(3,5) + "-" + SSN.substring(5);
+	public void setSocial(String ssn){
+		socialSecurityNumber = ssn.substring(0,3) + "-" 
+			+ ssn.substring(3,5) + "-" + ssn.substring(5);
 	}	 
 	public void setStartYear(int sY){		 
 		startYear = sY;
@@ -55,14 +54,14 @@ public class Employee {
 	}
 	 
 	// Accessors (Getters)
-	public String getfirstName(){
+	public String getFirstName(){
 		return firstName;
 	}
 	public String getLastName(){
 		return lastName;
 	}	 
 	public String getIDnumber(){
-		return IDnumber = CreateIDNumber();
+		return idNumber = createIDNumber();
 	}	 
 	public String getSocial(){
 		return socialSecurityNumber;
@@ -76,10 +75,9 @@ public class Employee {
 	public int getDepCode(){
 		return departmentCode;
 	}
-	 
-	// Method to create ID include required toString()
+	
 	// Format: FNinitialLNinitial-4RandomNum		 
-	private String CreateIDNumber(){
+	private String createIDNumber(){
 		Random randomNum = new Random();
 		int randomInt = randomNum.nextInt(9999);
 		String rNum = String.format("%04d", randomInt);
@@ -87,33 +85,15 @@ public class Employee {
 				+Character.toString(lastName.toUpperCase().charAt(0))+"-"+rNum;
 		return idNum;
 	}	 
-	
-
-
-	public void printEmployee(){
-		JOptionPane.showMessageDialog(null, "Employee details with Print method"
-			+ "\nEmploye Id: " + IDnumber
+	// Method toString()
+	public String toString(){
+//		idNumber = createIDNumber();
+		return "Employe ID: " + idNumber
 			+ "\nFirst name: " + firstName
 			+ "\nLast name: " + lastName
-			+ "\nSocial security number: " + socialSecurityNumber
+			+ "\nSocial Security Number: " + socialSecurityNumber
 			+ "\nStart year: " + startYear
 			+ "\nDepartment: " + department
-			+ "\nDepartment code: " + departmentCode);
+			+ "\nDepartment code: " + departmentCode + "\n";
 	}	
-	
-	//prompt joptionpane messages for cleaner code
-	 static String promptS(String p){
-		p = JOptionPane.showInputDialog(p);
-		return p;
-	}
-	 static int promptI(String p){
-		p = JOptionPane.showInputDialog(p);
-		int r = Integer.parseInt(p);
-		return r;
-	}
-	
-	 static void printS(String p){
-		JOptionPane.showMessageDialog(null, p);
-		
-	}
 }
