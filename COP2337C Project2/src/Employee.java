@@ -8,12 +8,11 @@ public class Employee {
 	 
 	// Default constructor
 	public Employee(){
-		
 		firstName = "John";
 		lastName = "Doe";
 		startYear = 2017;
 		idNumber = createIDNumber();
-		socialSecurityNumber = "XXXXXXXXX";
+		socialSecurityNumber = "123456789";
 		setSocial(socialSecurityNumber);
 		department = "Java";
 		departmentCode = 21;
