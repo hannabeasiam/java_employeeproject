@@ -7,7 +7,7 @@ public class EmployeeTester {
 		String SSN;
 	
 		// Prompt user
-		String fN = Employee.promptS("Employee 1first name?");
+		String fN = Employee.promptS("Employee first name?");
 		String lN = Employee.promptS("Employee last name?");
 		
 		//do while to validate SSN
