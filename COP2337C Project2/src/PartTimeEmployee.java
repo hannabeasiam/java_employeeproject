@@ -23,7 +23,6 @@ public class PartTimeEmployee extends Employee{
 	}
 	
 	public double getHourlyRate(){
-		
 		return hourlyRate;
 	}
 	
@@ -48,6 +47,6 @@ public class PartTimeEmployee extends Employee{
 	
 	// Method toString()
 	public String toString(){
-		return super.toString()+"\nWeekly Hours Worked: "+weeklyHoursWorked+"\nHourly Rate: "+hourlyRate+"\nWeekly Pay: "+CalculateWeeklyPay()+"\n";
+		return super.toString()+"\nWeekly Hours Worked: "+weeklyHoursWorked+".\nHourly Rate: "+hourlyRate+".\nWeekly Pay: "+CalculateWeeklyPay()+".\n";
 	}
 }
