@@ -1,4 +1,4 @@
-
+import java.util.Currency;
 
 public class EmployeeTester {	
 	// Driver class
@@ -16,5 +16,12 @@ public class EmployeeTester {
 		PartTimeEmployee p2 = new PartTimeEmployee("Jane", "Doe", "987654321", 2015, "IT", 1234, 42, 10);
 		System.out.println("PartTimeEmployee p2 (para)");
 		System.out.println(p2);
+		//FullTimeEmployee test
+		FullTimeEmployee f1 = new FullTimeEmployee();
+		System.out.println("FullTimeEmployee f1 (default)");
+		System.out.println(f1);
+		FullTimeEmployee f2 = new FullTimeEmployee("Wal", "Green", "123654789", 2016, "Sales", 3333, 100000);
+		System.out.println("FullTimeEmployee f2 (para)");
+		System.out.println(f2);
 	}
 }
