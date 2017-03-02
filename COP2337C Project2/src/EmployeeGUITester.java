@@ -228,7 +228,7 @@ public class EmployeeGUITester extends JFrame {
 					errorCount++;
 				}
 				if (txtDepartment.getText().isEmpty()){
-					errors.append("\n\u2022Please enter deparrtment name.");
+					errors.append("\n\u2022Please enter department name.");
 					errorCount++;
 				}
 				if (txtStartYear.getText().isEmpty()){
