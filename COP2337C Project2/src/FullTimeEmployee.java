@@ -7,20 +7,20 @@ public class FullTimeEmployee extends Employee {
 	//Default constructor
 	public FullTimeEmployee(){
 		super();
-		annualSalary=0;
+		this.annualSalary=0;
 	}
 	//Parameter constructor
 	public FullTimeEmployee(String fN, String lN, String ssn, int sY, String dep, int depCode, double as){
 		super(fN,lN,ssn,sY,dep,depCode);
-		annualSalary=as;
+		this.annualSalary=as;
 	}
 	//Mutator
 	public void setAnnualSalary(double as){
-		annualSalary=as;
+		this.annualSalary=as;
 	}
 	//Accessor
 	public double getAnnualSalary(){
-		return annualSalary;
+		return this.annualSalary;
 	}
 	//Method
 	public double CalculateWeeklyPay(){
@@ -32,6 +32,7 @@ public class FullTimeEmployee extends Employee {
 	 *toString method, import java.text.NumberFormat to use currency format 
 	 */
 	public String toString(){
-		return super.toString()+"Annual Salary: "+ NumberFormat.getCurrencyInstance().format(annualSalary)+"\nWeekly Pay: "+NumberFormat.getCurrencyInstance().format(CalculateWeeklyPay())+"\n";
+		return super.toString()+"Annual Salary: "+ NumberFormat.getCurrencyInstance().format(this.annualSalary)
+				+"\nWeekly Pay: "+NumberFormat.getCurrencyInstance().format(CalculateWeeklyPay())+"\n";
 	}
 }

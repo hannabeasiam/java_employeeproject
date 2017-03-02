@@ -7,8 +7,8 @@ public class PartTimeEmployee extends Employee{
 	// Constructors
 	public PartTimeEmployee(){
 		super();
-		weeklyHoursWorked=0;
-		hourlyRate=0;
+		this.weeklyHoursWorked=0;
+		this.hourlyRate=0;
 	}
 	
 	//Parameter constructor
@@ -19,34 +19,37 @@ public class PartTimeEmployee extends Employee{
 	}
 	// Accessors (Getters)
 	public double getWeeklyHoursWorked(){
-		return weeklyHoursWorked;
+		return this.weeklyHoursWorked;
 	}
 	
 	public double getHourlyRate(){
-		return hourlyRate;
+		return this.hourlyRate;
 	}
 	
 	// Mutators (Setters)
 	public void setWeeklyHoursWorked(double whw){
-		weeklyHoursWorked=whw;
+		this.weeklyHoursWorked=whw;
 	}
 	
 	public void setHourlyRate(double hr){
-		hourlyRate=hr;
+		this.hourlyRate=hr;
 	}
 	
 	// Methods
+	//calculates weekly pay
 	public double CalculateWeeklyPay(){
 		double weeklyPay;
-		if(weeklyHoursWorked<=40)
-			weeklyPay = weeklyHoursWorked * hourlyRate;
+		if(this.weeklyHoursWorked<=40)
+			weeklyPay = this.weeklyHoursWorked * this.hourlyRate;
 		else
-			weeklyPay = (40 * hourlyRate)+((weeklyHoursWorked-40) * hourlyRate * 1.5);
+			//calculates weekly pay if theres over time
+			weeklyPay = (40 * this.hourlyRate)+((this.weeklyHoursWorked-40) * this.hourlyRate * 1.5);
 		return weeklyPay;
 	}	
 	
 	// Method toString()
 	public String toString(){
-		return super.toString()+"\nWeekly Hours Worked: "+weeklyHoursWorked+".\nHourly Rate: "+hourlyRate+".\nWeekly Pay: "+CalculateWeeklyPay()+".\n";
+		return super.toString()+"Weekly Hours Worked: "+weeklyHoursWorked+"\nHourly Rate: "
+	+hourlyRate+"\nWeekly Pay: "+CalculateWeeklyPay()+"\n";
 	}
 }
