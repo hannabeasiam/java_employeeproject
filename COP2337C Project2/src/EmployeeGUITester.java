@@ -74,14 +74,14 @@ public class EmployeeGUITester extends JFrame {
 				contentPane.setLayout(null);
 		
 		txtFirstName = new JTextField();
-		txtFirstName.setText("First Name");
-		txtFirstName.setBounds(56, 6, 151, 26);
+		txtFirstName.setText("Default");
+		txtFirstName.setBounds(92, 6, 115, 26);
 		contentPane.add(txtFirstName);
 		txtFirstName.setColumns(10);
 		
 		txtLastName = new JTextField();
-		txtLastName.setText("Last Name");
-		txtLastName.setBounds(56, 39, 151, 26);
+		txtLastName.setText("Default");
+		txtLastName.setBounds(92, 39, 115, 26);
 		contentPane.add(txtLastName);
 		txtLastName.setColumns(10);
 		
@@ -99,7 +99,7 @@ public class EmployeeGUITester extends JFrame {
 		
 		txtSocialSecurityNumber = new JTextField();
 		txtSocialSecurityNumber.setText("111223333");
-		txtSocialSecurityNumber.setBounds(56, 66, 151, 26);
+		txtSocialSecurityNumber.setBounds(92, 66, 115, 26);
 		contentPane.add(txtSocialSecurityNumber);
 		txtSocialSecurityNumber.setColumns(10);
 		
@@ -111,7 +111,7 @@ public class EmployeeGUITester extends JFrame {
 		
 		txtWeeklyhoursworked = new JTextField();
 		txtWeeklyhoursworked.setText("27");
-		txtWeeklyhoursworked.setBounds(56, 92, 151, 26);
+		txtWeeklyhoursworked.setBounds(92, 92, 115, 26);
 		contentPane.add(txtWeeklyhoursworked);
 		txtWeeklyhoursworked.setColumns(10);
 		
@@ -151,14 +151,14 @@ public class EmployeeGUITester extends JFrame {
 		lblHourlyRate.setBounds(213, 97, 81, 16);
 		contentPane.add(lblHourlyRate);
 		
-		lblNewLabel = new JLabel("fName");
+		lblNewLabel = new JLabel("First Name");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblNewLabel.setBounds(6, 6, 49, 21);
+		lblNewLabel.setBounds(6, 6, 74, 21);
 		contentPane.add(lblNewLabel);
 		
-		lblLname = new JLabel("lName");
+		lblLname = new JLabel("Last Name");
 		lblLname.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		lblLname.setBounds(6, 44, 49, 16);
+		lblLname.setBounds(6, 44, 74, 16);
 		contentPane.add(lblLname);
 		
 		lblNewLabel_1 = new JLabel("SSN");
